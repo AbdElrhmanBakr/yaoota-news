@@ -1,0 +1,17 @@
+.logo-container {
+  width: 300px;
+  margin-left: 40px;
+}
+
+.logo-img {
+  width: 300px;
+  height: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .logo-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+}
