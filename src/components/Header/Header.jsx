@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate, Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import "./Header.css";
 
@@ -15,16 +15,13 @@ const Header = () => {
         <nav className="navbar-container">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">About</a>
+              <Link to="/LeanneGraham">ProfileSample</Link>
             </li>
             <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
+              <Link to="/1">PostSample</Link>
             </li>
           </ul>
         </nav>

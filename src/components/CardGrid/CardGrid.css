@@ -1,7 +1,50 @@
+.grid-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .card-grid {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.round-effect {
+  font-weight: bold;
+  color: crimson;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.4s;
+}
+
+.round-effect:hover {
+  background: crimson;
+  color: #fff;
+}
+
+.pag-active {
+  background: crimson;
+  color: #fff;
 }

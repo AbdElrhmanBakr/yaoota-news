@@ -10,6 +10,10 @@
   justify-content: center;
   color: var(--primary);
   margin: 30px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .profile-card {
@@ -159,6 +163,22 @@ span.circle {
   font-weight: bold;
 }
 
+.website-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.website {
+  font-size: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
 .number .info {
   font-size: 0.75rem;
   display: -webkit-box;
@@ -168,11 +188,6 @@ span.circle {
   -ms-flex-align: center;
   align-items: center;
   font-weight: normal;
-}
-
-.number .info svg {
-  height: 15px;
-  width: 15px;
 }
 
 @media (max-width: 1381px) {
