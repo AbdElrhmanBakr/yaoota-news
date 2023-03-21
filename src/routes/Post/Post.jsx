@@ -7,16 +7,15 @@ import CommentInput from "../../components/CommentInput/CommentInput";
 import "./Post.css";
 
 const Post = () => {
-  //Current Post State of all user,postData and comments
-  const [postUser, setPostUser] = useState({});
-  const [postData, setPostData] = useState({});
-  const [postComments, setPostComments] = useState([]);
-
   //Get Post Id from params
   const { post } = useParams();
-
   //Get all posts,users,comments from Reducer Context.
   const { users, posts, comments } = useContext(userContext);
+
+  //Current Post State of all user,postData and comments
+  const [postUser, setPostUser] = useState({});
+  const [postData, setPostData] = useState(posts[post]);
+  const [postComments, setPostComments] = useState([]);
 
   //Filter all Posts Data to the specify Current Post with params identifier
   useEffect(() => {
@@ -35,7 +34,7 @@ const Post = () => {
   //Filter all Comments Data to the specify Post Comments
   useEffect(() => {
     const currentComments = comments.filter(
-      (singleComment) => singleComment.postId == postData.id
+      (singleComment) => singleComment.postId == post
     );
     setPostComments(currentComments);
   }, [postData, comments]);
