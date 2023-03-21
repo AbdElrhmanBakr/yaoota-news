@@ -45,7 +45,7 @@ Install all NPM Packages
 Start Development
 
 ```bash
-  npm start
+  npm run dev
 ```
 
 ## FAQ
