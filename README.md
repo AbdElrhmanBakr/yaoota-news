@@ -12,7 +12,7 @@ App is created with React.js [Vite] , React Reducer [Context] for State manageme
 
 ## Important
 
-There is a [actions.yml] file inside directory [/.github/wworkflows] for auto deplyment to my server using ftp access for a direct live demo.
+There is a [actions.yml] file inside directory [/.github/wworkflows] for auto deplyment to my server using ftp access for a direct live demo. Also app post [Cards] on clicking on it header title will lead to its own post page with author, post, comments data and same for user name on post card will lead to its own user profile page with all of his posts and simple insight of the user.
 
 ## Demo
 
