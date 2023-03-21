@@ -5,11 +5,13 @@ import Card from "../Card/Card";
 import "./CardGrid.css";
 
 const CardGrid = ({ users, posts }) => {
+  // Initiating React paginate States
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 20;
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = posts.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(posts.length / itemsPerPage);
+  //On page number Click
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % posts.length;
     setItemOffset(newOffset);

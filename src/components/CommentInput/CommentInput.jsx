@@ -3,7 +3,10 @@ import { userContext } from "../../context/UsersContext";
 import "./CommentInput.css";
 
 const CommentInput = ({ postId }) => {
+  // Getting comments and its dispatch from Reducer [Context]
   const { comments, setComments } = useContext(userContext);
+
+  // Initial Value for the comment input state.
   const INITIAL_VALUE = {
     id: "",
     postId: "",
@@ -11,6 +14,7 @@ const CommentInput = ({ postId }) => {
     email: "",
     body: "",
   };
+  // Comment Input State.
   const [inputComment, setInputComment] = useState(INITIAL_VALUE);
 
   //Update Input Data State
@@ -19,6 +23,8 @@ const CommentInput = ({ postId }) => {
     setInputComment((prevState) => ({ ...inputComment, [name]: value }));
   };
 
+  // Handle form button click to update comment in Reducer [Context]
+  // Then cleaning Input Values.
   const handleFormSubmit = (event) => {
     event.preventDefault();
     setComments([

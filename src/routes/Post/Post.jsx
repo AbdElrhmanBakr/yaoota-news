@@ -9,6 +9,7 @@ import "./Post.css";
 const Post = () => {
   //Get Post Id from params
   const { post } = useParams();
+
   //Get all posts,users,comments from Reducer Context.
   const { users, posts, comments } = useContext(userContext);
 

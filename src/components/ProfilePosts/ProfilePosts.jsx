@@ -2,8 +2,6 @@ import ProfilePostCard from "../ProfilePostCard/ProfilePostCard";
 import "./ProfilePosts.css";
 
 const CardGrid = ({ user, posts }) => {
-  //Mapping over all posts and calling Card Component to render all.
-
   return (
     <div className="card-grid">
       {user.id &&

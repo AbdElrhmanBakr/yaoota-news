@@ -6,12 +6,17 @@ import ProfilePosts from "../../components/ProfilePosts/ProfilePosts";
 import "./Profile.css";
 
 const Profile = () => {
+  //Get all posts,users from Reducer Context.
   const { users, posts } = useContext(userContext);
+
+  // Init new states for every single user's posts and his data.
   const [currentUser, setCurrentUser] = useState({});
   const [userPosts, setUserPosts] = useState([]);
+
+  // Fetching User Name from params.
   const { user } = useParams();
 
-  //Specify user data out of all users array.
+  //Specify user data out of all users array with Params identifier
   useEffect(() => {
     users.forEach((singleUser) => {
       if (singleUser.name.replace(/\s+/g, "").replace(".", "") === user) {

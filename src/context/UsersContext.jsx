@@ -10,7 +10,7 @@ export const userContext = createContext({
   setComments: () => null,
 });
 
-//All Reducer Actions Type Object.
+//Object for All Reducer Actions Type.
 const USER_ACTION_TYPE = {
   SET_USERS: "SET_USERS",
   SET_POSTS: "SET_POSTS",
@@ -42,7 +42,10 @@ const INITIAL_STATE = {
   comments: [],
 };
 export const UsersProvider = ({ children }) => {
+  // Init Reducer Hook for state management.
   const [state, dispatch] = useReducer(userReducer, INITIAL_STATE);
+
+  // Destructuring State of the Reducer.
   const { users, posts, comments } = state;
 
   //Init Users Reducer Setter.
@@ -120,6 +123,7 @@ export const UsersProvider = ({ children }) => {
     getComments();
   }, []);
 
+  // All Values pass to all children of the Provider using Context.
   const value = { users, setUsers, posts, setPosts, comments, setComments };
   return <userContext.Provider value={value}>{children}</userContext.Provider>;
 };

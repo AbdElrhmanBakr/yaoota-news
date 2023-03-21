@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Card.css";
 
 const Card = ({ postId, user, title, body }) => {
+  //Navigate to post id onclick on Post Card Title Header.
   const navigateTo = useNavigate();
   const handleClick = () => navigateTo(`/posts/${postId}`);
   return (

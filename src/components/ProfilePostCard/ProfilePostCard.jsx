@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./ProfilePostCard.css";
 
 const ProfilePostCard = ({ postId, title, body }) => {
+  //Navigate to post id onclick on Post Card Title Header.
   const navigateTo = useNavigate();
   const handleClick = () => navigateTo(`/posts/${postId}`);
   return (
