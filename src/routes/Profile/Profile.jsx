@@ -27,7 +27,7 @@ const Profile = () => {
         setUserPosts((prevPosts) => [...prevPosts, singlePost]);
       }
     });
-  }, [currentUser, user]);
+  });
 
   return (
     <section className="profile-section">
