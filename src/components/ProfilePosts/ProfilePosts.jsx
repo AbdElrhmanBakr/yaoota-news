@@ -16,7 +16,7 @@ const CardGrid = ({ user, posts }) => {
           return (
             <ProfilePostCard
               key={id}
-              user={user}
+              postId={id}
               title={cardTtitle}
               body={cardBody}
             />

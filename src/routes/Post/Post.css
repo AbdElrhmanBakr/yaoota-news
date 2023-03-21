@@ -1,0 +1,228 @@
+:root {
+  --primary: #323232;
+  --light-bg: #f4f4f4;
+  --border: #eee;
+}
+
+.post-section {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  color: var(--primary);
+  margin: 30px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.post-card {
+  width: 100%;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.post-card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.card-post img {
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.post-card-name {
+  margin-left: 1.25rem;
+}
+
+.card-post-handle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.card-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.border {
+  border-radius: 5px;
+  height: 2px;
+  background-color: var(--border);
+  border: none;
+  margin: 1.25rem 0;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.post-card-insights .post-insights {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.post-card-insights .post-insights .post-insight {
+  width: 300px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  outline: 2px solid var(--border);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-card-insights .post-insights .post-insight:hover {
+  color: white;
+  background-color: var(--primary);
+  outline: none;
+}
+
+.post-card-insights .post-insights .post-insight .post-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.post-insight + .post-insight {
+  margin-left: 1rem;
+}
+
+.post-card-insights .post-number {
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.post-card-insights .post-website-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-card-insights .post-website {
+  font-size: 1.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.post-body {
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  margin: 30px 50px 50px 0;
+  padding: 40px;
+}
+
+.post-body p {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.comments {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+@media (max-width: 1381px) {
+  .insights {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .insights .insight:nth-child(3) {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .insights {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .insights .insight + .insight {
+    margin: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .card {
+    width: 90%;
+  }
+  .navlinks {
+    display: none;
+  }
+}
+
+@media (max-width: 545px) {
+  .card__button button {
+    width: 40px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .card__button button span {
+    display: none;
+  }
+  .card__button button svg {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 475px) {
+  .card__button {
+    display: none;
+  }
+}

@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
-import Header from "../components/Header/Header";
-import MainContent from "../components/MainContent/MainContent";
-import Profile from "../components/Profile/Profile";
+import Header from "../routes/Header/Header";
+import Home from "../routes/Home/Home";
+import Profile from "../routes/Profile/Profile";
+import Post from "../routes/Post/Post";
 import "./App.css";
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Header />}>
-          <Route index element={<MainContent />} />
+          <Route index element={<Home />} />
           <Route path=":user" element={<Profile />} />
+          <Route path="posts/:post" element={<Post />} />
         </Route>
       </Routes>
     </div>

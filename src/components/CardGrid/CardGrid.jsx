@@ -27,6 +27,7 @@ const CardGrid = ({ users, posts }) => {
             return (
               <Card
                 key={id}
+                postId={id}
                 user={users[userId - 1]}
                 title={cardTtitle}
                 body={cardBody}

@@ -1,10 +1,10 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { userContext } from "../../context/UsersContext";
-import CardGrid from "../CardGrid/CardGrid";
-import InputBox from "../InputBox/InputBox";
-import "./MainContent.css";
+import CardGrid from "../../components/CardGrid/CardGrid";
+import InputBox from "../../components/InputBox/InputBox";
+import "./Home.css";
 
-const MainContent = () => {
+const Home = () => {
   // Pagination State
   // FunctionState
   const { users, posts } = useContext(userContext);
@@ -28,4 +28,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default Home;

@@ -1,5 +1,5 @@
-import { Outlet, useNavigate, Link } from "react-router-dom";
-import Logo from "../Logo/Logo";
+import { Outlet, Link } from "react-router-dom";
+import Logo from "../../components/Logo/Logo";
 import "./Header.css";
 
 const Header = () => {
@@ -18,10 +18,10 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/LeanneGraham">ProfileSample</Link>
+              <Link to="/LeanneGraham">Profile Sample</Link>
             </li>
             <li>
-              <Link to="/1">PostSample</Link>
+              <Link to="posts/1">Post Sample</Link>
             </li>
           </ul>
         </nav>
